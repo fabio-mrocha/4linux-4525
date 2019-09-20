@@ -23,5 +23,6 @@ Vagrant.configure("2") do |config|
         vb.cpus = conf["cpu"]
         vb.customize ["modifyvm", :id, "--groups", "/525-InfraAgil"]
     end
+   end
   end
 end
