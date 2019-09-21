@@ -6,6 +6,8 @@ After=mariadb.service mysqld.service postgresql.service memcached.service redis.
 
 [Service]
 Type=simple
+User=gogs
+Group=gogs
 WorkingDirectory=/opt/gogs
 ExecStart=/opt/gogs/gogs web
 Restart=always
@@ -13,4 +15,3 @@ Environment=USER=gogs HOME=/home/gogs
 
 [Install]
 WantedBy=multi-user.target
-
