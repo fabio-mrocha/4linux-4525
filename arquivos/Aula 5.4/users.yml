@@ -2,8 +2,8 @@
 
 - name: Criacao de usuarios nos servidores
   hosts: all
-  vars_files:
-  - variaveis.yml
+  vars:
+  - username: sysadmin
   tasks:
 
   - name: Criando os usuarios nos servidores
