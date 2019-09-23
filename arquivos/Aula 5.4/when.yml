@@ -8,4 +8,4 @@
       - cmatrix
       - sl
       - ncdu
-    when: ansible_distribution == “Ubuntu”
+    when: ansible_distribution == "Ubuntu"
