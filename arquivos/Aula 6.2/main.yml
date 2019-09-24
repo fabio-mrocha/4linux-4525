@@ -51,8 +51,10 @@
     line: "{{ item }}"
   loop:
     - '[main]'
-    - 'server = compliance.4labs.example'
     - 'runinterval = 1h'
+    - '[agent]'
+    - 'server = compliance.4labs.example'
+    - 'certname = {{ ansible_nodename }}'
 
 - name: Executando o Puppet Agent nos servidores
   systemd:
