@@ -4,7 +4,7 @@ package {'ntp':
 -> file { '/etc/ntp.conf':
   ensure => file,
   mode   => '0600',
-  source => '/vagrant/files/ntp.conf'
+  source => '/vagrant/4525/files/ntp.conf'
 }
 ~> service {'ntp':
   ensure  => running,
