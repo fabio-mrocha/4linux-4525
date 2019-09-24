@@ -1,5 +1,5 @@
 - name: Instalando uma lista de pacotes nos servidores Ubuntu
-  hosts: compliance log
+  hosts: compliance log scm
   tasks:
 
   - name: Instalando pacotes
