@@ -1,7 +1,8 @@
 automation:
   nodename: automation
   hostname: automation.4labs.example
-  username: rundeck
+  username: root
+  ssh-key-storage-path: keys/devops
 
 compliance:
   nodename: compliance
