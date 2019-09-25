@@ -3,7 +3,7 @@
 
 machines = {
   "compliance" => {"memory" => "1024", "cpu" => "2", "ip" => "20", "image" => "ubuntu/bionic64"},
-  "container" => {"memory" => "1536", "cpu" => "1", "ip" => "30", "image" => "centos/7"},
+  "container" => {"memory" => "1536", "cpu" => "1", "ip" => "30", "image" => "fedora/29-atomic-host"},
   "scm" => {"memory" => "256", "cpu" => "1", "ip" => "40", "image" => "debian/buster64"},
   "log" => {"memory" => "2048", "cpu" => "1", "ip" => "50", "image" => "ubuntu/bionic64"},
   "automation" => {"memory" => "1536", "cpu" => "2", "ip" => "10", "image" => "centos/7"}
