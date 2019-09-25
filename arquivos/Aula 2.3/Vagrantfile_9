@@ -3,7 +3,7 @@
 
 machines = {
     "compliance" => {"image" => "ubuntu/bionic64"},
-    "container" => {"image" => "centos/7"},
+    "container" => {"image" => "fedora/29-atomic-host"},
     "scm" => {"image" => "debian/buster64"},
     "log" => {"image" => "ubuntu/bionic64"},
     "automation" => {"image" => "centos/7"}
