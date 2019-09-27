@@ -85,7 +85,7 @@ control 'elkb-files' do
     its('content') { should include 'port => 5443'}
     its('content') { should include 'type => syslog'}
   end
-  describe file('/etc/logstash/conf.d/sysconfig-filter.conf') do
+  describe file('/etc/logstash/conf.d/syslog-filter.conf') do
     it { should be_file}
     its('content') { should include 'if [type] == "syslog"'}
   end
