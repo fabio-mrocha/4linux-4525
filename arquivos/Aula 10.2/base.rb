@@ -56,13 +56,13 @@ control 'interface' do
   describe interface('lo') do
       its('ipv4_addresses') { should include '127.0.0.1' }
   end
-  if os.family == 'debian'
+  if os.family == 'debian' && os.release != '10.0'
     describe interface('enp0s8') do
       it { should be_up }
       its('speed') { should eq 1000 }
       its('ipv4_addresses') { should be_in IP }
     end
-  elsif os.family == 'redhat'
+  elsif os.family == 'redhat' || os.family == 'debian' && os.release == '10.0'
     describe interface('eth1') do
       it { should be_up }
       its('speed') { should eq 1000 }
