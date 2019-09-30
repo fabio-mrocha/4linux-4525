@@ -31,9 +31,14 @@ Vagrant.configure("2") do |config|
       end
         if "#{conf["image"]}" == "ubuntu/bionic64"
           machine.vm.provision "shell", inline: "apt install python -y"
+          machine.vm.provision "shell", inline: "echo '#{name}.4labs.example' > /etc/hostname"
+          machine.vm.provision "shell", inline: "hostnamectl set-hostname #{name}.4labs.example"
+        end
+        if "#{conf["image"]}" == "debian/buster64"
+          machine.vm.provision "shell", inline: "echo '#{name}.4labs.example' > /etc/hostname"
+          machine.vm.provision "shell", inline: "hostnamectl set-hostname #{name}.4labs.example"
         end
     end
   end
   config.vm.provision "shell", path: "script.sh"
 end
-
